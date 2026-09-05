@@ -8,7 +8,7 @@ analysis, product inspection, automated testing, equipment troubleshooting, and 
 documentation across automotive wiring and semiconductor manufacturing. Also hands-on with PC and
 production-machine hardware/software troubleshooting.
 
-- Portfolio: https://jay-r-eleazar.github.io *(update this link once your site is live — see below)*
+- Portfolio: https://jay-r-eleazar.github.io
 - Email: jayreleazar05@gmail.com
 - Phone: +971 54 145 9115
 - LinkedIn: [linkedin.com/in/jay-r-eleazar](https://linkedin.com/in/jay-r-eleazar)
