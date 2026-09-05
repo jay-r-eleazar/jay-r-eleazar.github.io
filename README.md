@@ -1,4 +1,4 @@
-# Jay-R Madriaga Eleazar
+# Jay-r Madriaga Eleazar
 
 **Quality Assurance Engineer · Failure Analysis Engineer · Technical Support Engineer · Test Engineer**
 Dubai, UAE
