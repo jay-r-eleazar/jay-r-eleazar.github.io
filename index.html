@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jay-R Madriaga Eleazar — Quality Assurance &amp; Test Engineer</title>
+<meta name="description" content="Portfolio of Jay-R Madriaga Eleazar, Quality Assurance / Failure Analysis / Technical Support Engineer based in Dubai, UAE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDEFF2;
+    --paper-line:#CBD3DE;
+    --ink:#16233B;
+    --ink-soft:#4B5567;
+    --ink-faint:#7C8598;
+    --stamp:#D9541C;
+    --pass:#276E5C;
+    --card:#F7F8FA;
+    --rule:#B9C2CF;
+    --max:960px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(to right, var(--paper-line) 0 1px, transparent 1px 88px),
+      repeating-linear-gradient(to bottom, var(--paper-line) 0 1px, transparent 1px 88px),
+      var(--paper);
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+
+  header.doc-head{
+    padding:56px 28px 36px;
+    border-bottom:2px solid var(--ink);
+  }
+  .doc-head-inner{
+    max-width:var(--max); margin:0 auto;
+    display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;
+  }
+  .doc-id{
+    font-size:12px; letter-spacing:.04em; color:var(--ink-faint);
+  }
+  h1{
+    font-size:clamp(30px, 4.5vw, 44px);
+    margin:6px 0 4px;
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+  .role-line{
+    font-size:15px; color:var(--ink-soft); font-weight:500;
+  }
+  .stamp{
+    flex-shrink:0;
+    width:96px; height:96px;
+    border:3px solid var(--stamp);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    transform:rotate(-8deg);
+    color:var(--stamp);
+    text-align:center;
+    line-height:1.15;
+  }
+  .stamp span{display:block;}
+  .stamp .s1{font-size:10px; letter-spacing:.12em; font-weight:600;}
+  .stamp .s2{font-size:16px; font-weight:700; margin:2px 0;}
+  .stamp .s3{font-size:9px; letter-spacing:.08em;}
+
+  nav.toc{
+    border-bottom:1px solid var(--rule);
+    background:rgba(255,255,255,.35);
+  }
+  nav.toc .wrap{
+    display:flex; gap:22px; flex-wrap:wrap;
+    padding:12px 28px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+  }
+  nav.toc a{ color:var(--ink-soft); text-decoration:none; }
+  nav.toc a:hover{ color:var(--stamp); }
+
+  section{ padding:44px 0 8px; }
+  .field-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:.08em; color:var(--stamp);
+    margin:0 0 10px;
+  }
+  h2{
+    font-size:22px; margin:0 0 20px; font-weight:600;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:10px;
+  }
+
+  .profile-text{ max-width:70ch; font-size:16px; color:var(--ink-soft); }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:14px 32px; }
+  @media (max-width:640px){ .grid2{ grid-template-columns:1fr; } }
+  .spec-row{
+    display:flex; justify-content:space-between; gap:12px;
+    border-bottom:1px dashed var(--rule);
+    padding:8px 0;
+    font-size:14px;
+  }
+  .spec-row .k{ color:var(--ink-faint); font-family:'IBM Plex Mono', monospace; font-size:12.5px; }
+  .spec-row .v{ text-align:right; color:var(--ink); }
+
+  .log{ position:relative; padding-left:26px; }
+  .log::before{
+    content:""; position:absolute; left:6px; top:6px; bottom:6px; width:1px;
+    background:var(--rule);
+  }
+  .entry{ position:relative; margin-bottom:34px; }
+  .entry::before{
+    content:""; position:absolute; left:-26px; top:6px;
+    width:11px; height:11px; border-radius:50%;
+    background:var(--card); border:2px solid var(--stamp);
+  }
+  .entry-head{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; }
+  .entry-title{ font-weight:600; font-size:16.5px; }
+  .entry-dates{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-faint); white-space:nowrap; }
+  .entry-company{ color:var(--stamp); font-size:13.5px; margin:2px 0 10px; font-weight:500; }
+  .entry ul{ margin:0; padding-left:18px; color:var(--ink-soft); font-size:14.5px; }
+  .entry li{ margin-bottom:6px; }
+
+  .skill-card{ background:var(--card); border:1px solid var(--rule); border-radius:2px; padding:14px 16px; }
+  .skill-card .cat{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:.06em; color:var(--pass); margin-bottom:6px; }
+  .skill-card .items{ font-size:13.5px; color:var(--ink-soft); }
+
+  .cert-list{ list-style:none; margin:0; padding:0; font-size:14.5px; }
+  .cert-list li{ display:flex; justify-content:space-between; gap:16px; border-bottom:1px dashed var(--rule); padding:9px 0; color:var(--ink-soft); }
+  .cert-list .name{ color:var(--ink); }
+  .cert-list .date{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-faint); white-space:nowrap; }
+
+  footer{
+    margin-top:60px; border-top:2px solid var(--ink);
+    padding:24px 0 40px;
+  }
+  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-faint); }
+  footer a{ color:var(--ink-soft); }
+
+  .contact-row{ display:flex; flex-wrap:wrap; gap:14px 22px; font-size:13.5px; color:var(--ink-soft); margin-top:10px; }
+  .contact-row a{ color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--rule); }
+  .contact-row a:hover{ color:var(--stamp); border-color:var(--stamp); }
+</style>
+</head>
+<body>
+
+<header class="doc-head">
+  <div class="doc-head-inner">
+    <div>
+      <div class="doc-id mono">PROFILE / REV. 2026-09</div>
+      <h1>Jay-R Madriaga Eleazar</h1>
+      <div class="role-line">Quality Assurance &middot; Failure Analysis &middot; Technical Support &middot; Test Engineering</div>
+      <div class="contact-row">
+        <span>Dubai, UAE</span>
+        <a href="tel:+971541459115">+971 54 145 9115</a>
+        <a href="mailto:jayreleazar05@gmail.com">jayreleazar05@gmail.com</a>
+        <a href="https://linkedin.com/in/jay-r-eleazar" target="_blank" rel="noopener">linkedin.com/in/jay-r-eleazar</a>
+      </div>
+    </div>
+    <div class="stamp">
+      <span class="s1">QUALITY</span>
+      <span class="s2">PASSED</span>
+      <span class="s3">ISO 9001</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#profile">01 / Profile</a>
+    <a href="#experience">02 / Experience</a>
+    <a href="#project">03 / Project</a>
+    <a href="#skills">04 / Skills</a>
+    <a href="#credentials">05 / Credentials</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="profile">
+    <div class="field-label mono">SEC. 01</div>
+    <h2>Profile</h2>
+    <p class="profile-text">
+      Computer Engineering graduate with nearly three years of experience in quality assurance, failure analysis,
+      product inspection, automated testing, equipment troubleshooting, and technical documentation within
+      automotive wiring and semiconductor manufacturing environments. Experienced in inspecting raw materials,
+      in-process products, and finished goods; investigating defects; supporting root cause analysis and corrective
+      actions; maintaining testing equipment; and preparing quality and audit records. Also provides hands-on
+      support for production machine, PC, and hardware/software issues. Familiar with ISO 9001 requirements, test
+      data analysis, calibration, preventive maintenance, and cross-functional production support.
+    </p>
+  </section>
+
+  <section id="experience">
+    <div class="field-label mono">SEC. 02</div>
+    <h2>Professional Experience</h2>
+    <div class="log">
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Quality Assurance Engineer</div>
+          <div class="entry-dates">JUL 2025 &ndash; JUL 2026</div>
+        </div>
+        <div class="entry-company">Sumi North-Philippines Wiring Systems Corporation</div>
+        <ul>
+          <li>Inspected automotive wiring harnesses, components, raw materials, in-process assemblies, and finished products against engineering specifications and customer requirements.</li>
+          <li>Identified product defects and documented nonconformities to support containment, corrective action, and production decisions.</li>
+          <li>Performed initial defect investigation and root cause analysis in coordination with production and engineering teams.</li>
+          <li>Maintained inspection records and quality documentation to support traceability and audit readiness.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">QA Engineer / Failure Analysis Engineer / Technical Support Engineer</div>
+          <div class="entry-dates">DEC 2023 &ndash; JUN 2025</div>
+        </div>
+        <div class="entry-company">Sanyo Denki Philippines, Inc.</div>
+        <ul>
+          <li>Developed, maintained, and improved inspection and automated testing systems used to verify product quality and performance.</li>
+          <li>Conducted failure analysis and root cause investigations for defective products, test failures, and equipment-related issues.</li>
+          <li>Maintained, calibrated, and troubleshot testing and inspection equipment in line with ISO 9001 requirements.</li>
+          <li>Provided support troubleshooting production machines, PCs, and related hardware/software issues, minimizing equipment and workstation downtime.</li>
+          <li>Prepared failure analysis, inspection, audit, and test reports for technical review and quality tracking.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Test Engineer &mdash; Intern</div>
+          <div class="entry-dates">MAR 2023 &ndash; MAY 2023</div>
+        </div>
+        <div class="entry-company">Amertron Inc. &mdash; Philippines</div>
+        <ul>
+          <li>Set up and operated semiconductor test equipment and executed test programs against product and process requirements.</li>
+          <li>Analyzed test data to identify product defects, abnormal results, and equipment issues.</li>
+          <li>Documented test results, procedures, and failure observations for engineering and production review.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="project">
+    <div class="field-label mono">SEC. 03</div>
+    <h2>Academic Project</h2>
+    <div class="entry" style="margin-bottom:0;">
+      <div class="entry-head">
+        <div class="entry-title">Development of Fire Alarm Monitoring System</div>
+        <div class="entry-dates">CAPSTONE</div>
+      </div>
+      <ul>
+        <li>Built a real-time monitoring system for detecting and recording fire and smoke events using sensors and PLC-based monitoring.</li>
+        <li>Designed a graphical interface displaying system status, alarm events, location, and detection time.</li>
+        <li>Implemented database functionality for storing and tracking incident records, with alert-notification features for faster response.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="field-label mono">SEC. 04</div>
+    <h2>Technical Skills</h2>
+    <div class="grid2" style="margin-bottom:20px;">
+      <div class="skill-card">
+        <div class="cat">QUALITY &amp; ENGINEERING</div>
+        <div class="items">Quality assurance, product inspection, failure analysis, root cause analysis, equipment testing, calibration, preventive maintenance, audit support, technical documentation</div>
+      </div>
+      <div class="skill-card">
+        <div class="cat">TESTING &amp; TROUBLESHOOTING</div>
+        <div class="items">Automated testing, test data analysis, production machine troubleshooting, PC hardware &amp; software troubleshooting</div>
+      </div>
+      <div class="skill-card">
+        <div class="cat">OPERATING SYSTEMS</div>
+        <div class="items">Windows, Ubuntu, Linux</div>
+      </div>
+      <div class="skill-card">
+        <div class="cat">PROGRAMMING / DATABASES</div>
+        <div class="items">Python, C++, Visual Basic, SQL, SQL Server</div>
+      </div>
+      <div class="skill-card">
+        <div class="cat">NETWORKING</div>
+        <div class="items">TCP/IP, basic network troubleshooting, network fundamentals</div>
+      </div>
+      <div class="skill-card">
+        <div class="cat">SOFTWARE</div>
+        <div class="items">Word, Excel, PowerPoint, Visual Studio, Android Studio, AutoCAD</div>
+      </div>
+    </div>
+
+    <div class="spec-row"><span class="k">LANGUAGES</span><span class="v">English (Fluent) &middot; Filipino (Native)</span></div>
+    <div class="spec-row"><span class="k">EDUCATION</span><span class="v">B.S. Computer Engineering, Systems &amp; Network Administration &mdash; Pangasinan State University, 2018&ndash;2023</span></div>
+  </section>
+
+  <section id="credentials">
+    <div class="field-label mono">SEC. 05</div>
+    <h2>Trainings &amp; Certifications</h2>
+    <ul class="cert-list">
+      <li><span class="name">Python Essentials 1 &amp; 2 &mdash; Cisco Networking Academy</span><span class="date">SEP 2023</span></li>
+      <li><span class="name">Introduction to Cybersecurity &mdash; Cisco Networking Academy</span><span class="date">SEP 2023</span></li>
+      <li><span class="name">Robotics and Automation &mdash; Philippine Center for Creative Imaging</span><span class="date">MAY 2023</span></li>
+      <li><span class="name">3D Animation Fundamentals</span><span class="date">MAY 2023</span></li>
+      <li><span class="name">NC II Driving &mdash; TESDA</span><span class="date">DEC 2025</span></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Jay-R Madriaga Eleazar</span>
+    <span><a href="mailto:jayreleazar05@gmail.com">jayreleazar05@gmail.com</a> &middot; Dubai, UAE</span>
+  </div>
+</footer>
+
+</body>
+</html>
