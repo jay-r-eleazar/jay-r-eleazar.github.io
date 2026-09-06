@@ -10,7 +10,7 @@ production-machine hardware/software troubleshooting.
 
 - Portfolio: https://jay-r-eleazar.github.io
 - Email: jayreleazar05@gmail.com
-- Phone: +971 54 145 9115
+- Phone: +971-54-145-9115
 - LinkedIn: [linkedin.com/in/jay-r-eleazar](https://linkedin.com/in/jay-r-eleazar)
 
 ---
