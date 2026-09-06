@@ -50,9 +50,6 @@ Python Essentials 1 · Python Essentials 2 · Introduction to Cybersecurity · C
 (all Cisco Networking Academy) · Robotics and Automation (PCCI) · Introduction to Mechatronics and
 Maximizing Efficiency and Productivity with Collaborative Robots (Probot Corporation) · NC II Driving (TESDA)
 
-The portfolio site now shows a clickable certificate photo next to each item in this list — see
-"Adding your certificate images" below to turn those on.
-
 ---
 
 📧 Reach me at **jayreleazar05@gmail.com** — open to Quality Assurance, Failure Analysis, Technical
