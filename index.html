@@ -132,18 +132,6 @@
   .entry ul{ margin:0; padding-left:18px; color:var(--ink-soft); font-size:14.5px; }
   .entry li{ margin-bottom:6px; }
 
-  .project-figure{ margin:18px 0 6px; }
-  .project-figure img{
-    display:block; width:100%; height:auto;
-    border:1px solid var(--rule); border-radius:3px;
-    background:#fff;
-    cursor:pointer;
-  }
-  .project-figure figcaption{
-    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-faint);
-    margin-top:8px;
-  }
-
   .skill-card{ background:var(--card); border:1px solid var(--rule); border-radius:2px; padding:14px 16px; }
   .skill-card .cat{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:.06em; color:var(--pass); margin-bottom:6px; }
   .skill-card .items{ font-size:13.5px; color:var(--ink-soft); }
@@ -321,6 +309,7 @@
   <section id="project">
     <div class="field-label mono">SEC. 03</div>
     <h2>Academic Project</h2>
+
     <div class="entry" style="margin-bottom:0;">
       <div class="entry-head">
         <div class="entry-title">Development of Fire Alarm Monitoring System</div>
@@ -331,10 +320,6 @@
         <li>Designed a graphical interface displaying system status, alarm events, location, and detection time.</li>
         <li>Implemented database functionality for storing and tracking incident records, with alert-notification features for faster response.</li>
       </ul>
-      <figure class="project-figure">
-        <img src="assets/project/addressable-fire-alarm-system.jpg" alt="Addressable fire alarm system diagram showing the fire alarm control panel wired to fire detectors, manual call points, a fire bell, and a fire alarm sounder across two zones" onclick="openLightbox(this.src, 'Addressable Fire Alarm System')">
-        <figcaption>Addressable Fire Alarm System &mdash; control panel, detectors, manual call points, and sounder wired across Zone 1 &amp; Zone 2.</figcaption>
-      </figure>
     </div>
   </section>
 
