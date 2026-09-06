@@ -355,7 +355,7 @@
     <div class="field-label mono">SEC. 05</div>
     <h2>Trainings &amp; Certifications</h2>
     <p style="font-size:12.5px; color:var(--ink-faint); margin-top:-10px;">
-      <code class="mono">/</code>
+      <code class="mono"></code>
     </p>
     <ul class="cert-list" id="cert-list">
       <!-- items are rendered by the script below from the CERTS array -->
@@ -379,12 +379,7 @@
 </div>
 
 <script>
-  // ---------------------------------------------------------------
-  // Add or edit certificates here. `img` should point to a file you
-  // upload into the assets/certs/ folder of your repo. If the file
-  // isn't there yet, a neutral placeholder icon is shown instead —
-  // nothing breaks, and it will appear automatically once you add it.
-  // ---------------------------------------------------------------
+
   const CERTS = [
     { name: "Python Essentials 1 — Cisco Networking Academy", date: "SEP 2023", img: "assets/certs/python-essentials-1.jpg" },
     { name: "Python Essentials 2 — Cisco Networking Academy", date: "SEP 2023", img: "assets/certs/python-essentials-2.jpg" },
@@ -419,8 +414,6 @@
     thumb.setAttribute('aria-label', 'View certificate: ' + cert.name);
     thumb.innerHTML = placeholderSVG;
 
-    // Try loading the real image. If it exists, swap the thumbnail
-    // to show it and enable the lightbox; if not, keep the placeholder.
     const probe = new Image();
     probe.onload = () => {
       thumb.style.backgroundImage = `url('${cert.img}')`;
