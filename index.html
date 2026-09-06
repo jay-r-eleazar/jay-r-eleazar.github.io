@@ -44,7 +44,10 @@
   }
   .doc-head-inner{
     max-width:var(--max); margin:0 auto;
-    display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;
+    display:flex; justify-content:space-between; align-items:stretch; gap:24px; flex-wrap:wrap;
+  }
+  .head-left{
+    display:flex; flex-direction:column; justify-content:space-between;
   }
   .doc-id{
     font-size:12px; letter-spacing:.04em; color:var(--ink-faint);
@@ -113,6 +116,13 @@
   }
   .spec-row .k{ color:var(--ink-faint); font-family:'IBM Plex Mono', monospace; font-size:12.5px; }
   .spec-row .v{ text-align:right; color:var(--ink); }
+  .spec-row.edu-row{ align-items:center; }
+  .edu-v{ display:flex; align-items:center; justify-content:flex-end; gap:10px; text-align:right; }
+  .edu-logo{
+    flex:0 0 auto; width:28px; height:28px; object-fit:contain;
+    border-radius:50%; background:#fff; border:1px solid var(--rule);
+    padding:2px;
+  }
 
   .log{ position:relative; padding-left:26px; }
   .log::before{
@@ -209,12 +219,14 @@
 
 <header class="doc-head">
   <div class="doc-head-inner">
-    <div>
-      <div class="doc-id mono">PROFILE / REV. 2026-09</div>
-      <h1>
-        Jay-r Madriaga Eleazar
-      </h1>
-      <div class="role-line">Quality Assurance &middot; Failure Analysis &middot; Technical Support &middot; Test Engineering</div>
+    <div class="head-left">
+      <div>
+        <div class="doc-id mono">PROFILE / REV. 2026-09</div>
+        <h1>
+          Jay-r Madriaga Eleazar
+        </h1>
+        <div class="role-line">Quality Assurance &middot; Failure Analysis &middot; Technical Support &middot; Test Engineering</div>
+      </div>
       <div class="contact-row">
         <span>Dubai, UAE</span>
         <a href="tel:+971541459115">+971-54-145-9115</a>
@@ -354,7 +366,13 @@
     </div>
 
     <div class="spec-row"><span class="k">LANGUAGES</span><span class="v">English (Fluent) &middot; Filipino (Native)</span></div>
-    <div class="spec-row"><span class="k">EDUCATION</span><span class="v">B.S. Computer Engineering, Systems &amp; Network Administration &mdash; Pangasinan State University, 2018&ndash;2023</span></div>
+    <div class="spec-row edu-row">
+      <span class="k">EDUCATION</span>
+      <span class="edu-v">
+        B.S. Computer Engineering, Systems &amp; Network Administration &mdash; Pangasinan State University, 2018&ndash;2023
+        <img class="edu-logo" src="https://main.psu.edu.ph/wp-content/uploads/2022/06/logo.png" alt="Pangasinan State University seal">
+      </span>
+    </div>
   </section>
 
   <section id="credentials">
