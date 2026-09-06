@@ -8,7 +8,7 @@ analysis, product inspection, automated testing, equipment troubleshooting, and 
 documentation across automotive wiring and semiconductor manufacturing. Also hands-on with PC and
 production-machine hardware/software troubleshooting.
 
-- Portfolio: https://jay-r-eleazar.github.io *(update this link once your site is live — see below)*
+- Portfolio: https://jay-r-eleazar.github.io
 - Email: jayreleazar05@gmail.com
 - Phone: +971 54 145 9115
 - LinkedIn: [linkedin.com/in/jay-r-eleazar](https://linkedin.com/in/jay-r-eleazar)
@@ -54,29 +54,6 @@ The portfolio site now shows a clickable certificate photo next to each item in 
 "Adding your certificate images" below to turn those on.
 
 ---
-
-## Adding your certificate images
-
-The Trainings & Certifications section on the portfolio site can show a real photo or scan of each
-certificate, opening full-size when clicked. Since GitHub Pages only hosts static files (no upload
-button/server), you add the images directly into your repo and the page picks them up automatically.
-
-1. In your `<yourusername>.github.io` repo, create a folder: `assets/certs/`
-2. Add a photo or scan of each certificate there, using **exactly these filenames**:
-   - `python-essentials-1.jpg`
-   - `python-essentials-2.jpg`
-   - `intro-cybersecurity.jpg`
-   - `cyber-threat-management.jpg`
-   - `robotics-automation.jpg`
-   - `mechatronics-cobots.jpg`
-   - `3d-animation.jpg`
-   - `nc2-driving.jpg`
-3. Commit the files. Refresh your live site — each certificate's thumbnail will switch from the
-   placeholder icon to your actual image automatically, and clicking it opens a larger view.
-4. Don't have a scan for one yet? Leave it out — that item just keeps showing the neutral
-   placeholder icon until you add it later. Nothing breaks either way.
-5. To add a **new** certification later, open `index.html`, find the `CERTS` list near the bottom
-   of the file, and add a line following the same pattern (name, date, and the image filename).
 
 📧 Reach me at **jayreleazar05@gmail.com** — open to Quality Assurance, Failure Analysis, Technical
 Support, and Test Engineering roles in the UAE.
