@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jay-r Madriaga Eleazar — Quality Assurance &amp; Test Engineer</title>
-<meta name="description" content="Portfolio of Jay-r Madriaga Eleazar, Quality Assurance / Failure Analysis / Technical Support Engineer based in Dubai, UAE.">
+<title>Jay-R Madriaga Eleazar — Quality Assurance &amp; Test Engineer</title>
+<meta name="description" content="Portfolio of Jay-R Madriaga Eleazar, Quality Assurance / Failure Analysis / Technical Support Engineer based in Dubai, UAE.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -133,10 +133,62 @@
   .skill-card .cat{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:.06em; color:var(--pass); margin-bottom:6px; }
   .skill-card .items{ font-size:13.5px; color:var(--ink-soft); }
 
+  /* --- Certifications with thumbnail + lightbox --- */
   .cert-list{ list-style:none; margin:0; padding:0; font-size:14.5px; }
-  .cert-list li{ display:flex; justify-content:space-between; gap:16px; border-bottom:1px dashed var(--rule); padding:9px 0; color:var(--ink-soft); }
+  .cert-item{
+    display:flex; align-items:center; gap:14px;
+    border-bottom:1px dashed var(--rule);
+    padding:10px 0;
+  }
+  .cert-thumb{
+    flex:0 0 auto;
+    width:52px; height:52px;
+    border-radius:3px;
+    border:1px solid var(--rule);
+    background:var(--card) center/cover no-repeat;
+    cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+    position:relative;
+  }
+  .cert-thumb:hover{ border-color:var(--stamp); }
+  .cert-thumb.no-image{ cursor:default; }
+  .cert-thumb svg{ width:22px; height:22px; color:var(--ink-faint); }
+  .cert-thumb .add-hint{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-size:8.5px; color:var(--ink-faint);
+    background:var(--card);
+  }
+  .cert-body{ flex:1 1 auto; display:grid; grid-template-columns:1fr auto; gap:6px 16px; align-items:baseline; }
   .cert-list .name{ color:var(--ink); }
   .cert-list .date{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-faint); white-space:nowrap; }
+
+  /* Lightbox */
+  .lightbox{
+    display:none;
+    position:fixed; inset:0; z-index:100;
+    background:rgba(15,20,30,.82);
+    align-items:center; justify-content:center;
+    padding:32px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{
+    max-width:min(90vw, 720px); max-height:85vh;
+    border-radius:4px; box-shadow:0 10px 40px rgba(0,0,0,.4);
+    background:#fff;
+  }
+  .lightbox-close{
+    position:absolute; top:22px; right:28px;
+    width:38px; height:38px; border-radius:50%;
+    border:1px solid rgba(255,255,255,.4);
+    background:transparent; color:#fff; font-size:18px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .lightbox-close:hover{ border-color:#fff; }
+  .lightbox-caption{
+    position:absolute; bottom:26px; left:0; right:0; text-align:center;
+    color:#EDEFF2; font-family:'IBM Plex Mono', monospace; font-size:12.5px;
+  }
 
   footer{
     margin-top:60px; border-top:2px solid var(--ink);
@@ -156,7 +208,7 @@
   <div class="doc-head-inner">
     <div>
       <div class="doc-id mono">PROFILE / REV. 2026-09</div>
-      <h1>Jay-r Madriaga Eleazar</h1>
+      <h1>Jay-R Madriaga Eleazar</h1>
       <div class="role-line">Quality Assurance &middot; Failure Analysis &middot; Technical Support &middot; Test Engineering</div>
       <div class="contact-row">
         <span>Dubai, UAE</span>
@@ -302,12 +354,12 @@
   <section id="credentials">
     <div class="field-label mono">SEC. 05</div>
     <h2>Trainings &amp; Certifications</h2>
-    <ul class="cert-list">
-      <li><span class="name">Python Essentials 1 &amp; 2 &mdash; Cisco Networking Academy</span><span class="date">SEP 2023</span></li>
-      <li><span class="name">Introduction to Cybersecurity &mdash; Cisco Networking Academy</span><span class="date">SEP 2023</span></li>
-      <li><span class="name">Robotics and Automation &mdash; Philippine Center for Creative Imaging</span><span class="date">MAY 2023</span></li>
-      <li><span class="name">3D Animation Fundamentals</span><span class="date">MAY 2023</span></li>
-      <li><span class="name">NC II Driving &mdash; TESDA</span><span class="date">DEC 2025</span></li>
+    <p style="font-size:12.5px; color:var(--ink-faint); margin-top:-10px;">
+      Click a thumbnail to view the certificate. To add your own, drop an image into
+      <code class="mono">assets/certs/</code> in your repo with the matching filename below.
+    </p>
+    <ul class="cert-list" id="cert-list">
+      <!-- items are rendered by the script below from the CERTS array -->
     </ul>
   </section>
 
@@ -315,10 +367,96 @@
 
 <footer>
   <div class="wrap">
-    <span>&copy; 2026 Jay-r Madriaga Eleazar</span>
+    <span>&copy; 2026 Jay-R Madriaga Eleazar</span>
     <span><a href="mailto:jayreleazar05@gmail.com">jayreleazar05@gmail.com</a> &middot; Dubai, UAE</span>
   </div>
 </footer>
+
+<!-- Lightbox overlay -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="Certificate">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+  // ---------------------------------------------------------------
+  // Add or edit certificates here. `img` should point to a file you
+  // upload into the assets/certs/ folder of your repo. If the file
+  // isn't there yet, a neutral placeholder icon is shown instead —
+  // nothing breaks, and it will appear automatically once you add it.
+  // ---------------------------------------------------------------
+  const CERTS = [
+    { name: "Python Essentials 1 — Cisco Networking Academy", date: "SEP 2023", img: "assets/certs/python-essentials-1.jpg" },
+    { name: "Python Essentials 2 — Cisco Networking Academy", date: "SEP 2023", img: "assets/certs/python-essentials-2.jpg" },
+    { name: "Introduction to Cybersecurity — Cisco Networking Academy", date: "SEP 2023", img: "assets/certs/intro-cybersecurity.jpg" },
+    { name: "Cyber Threat Management — Cisco Networking Academy", date: "SEP 2023", img: "assets/certs/cyber-threat-management.jpg" },
+    { name: "Robotics and Automation — Philippine Center for Creative Imaging", date: "MAY 2023", img: "assets/certs/robotics-automation.jpg" },
+    { name: "Introduction to Mechatronics and Maximizing Efficiency and Productivity with Collaborative Robots — Probot Corporation", date: "MAY 2023", img: "assets/certs/mechatronics-cobots.jpg" },
+    { name: "3D Animation Fundamentals", date: "MAY 2023", img: "assets/certs/3d-animation.jpg" },
+    { name: "NC II Driving — TESDA", date: "DEC 2025", img: "assets/certs/nc2-driving.jpg" },
+  ];
+
+  const listEl = document.getElementById('cert-list');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+
+  const placeholderSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <rect x="3" y="4" width="18" height="15" rx="1.5"/>
+      <circle cx="8.2" cy="10" r="1.6"/>
+      <path d="M4 16l4.5-4.5a1.6 1.6 0 0 1 2.2 0L15 15.8"/>
+      <path d="M14 13.5l1.7-1.7a1.6 1.6 0 0 1 2.2 0L21 15"/>
+    </svg>`;
+
+  CERTS.forEach((cert, i) => {
+    const li = document.createElement('li');
+    li.className = 'cert-item';
+
+    const thumb = document.createElement('div');
+    thumb.className = 'cert-thumb';
+    thumb.setAttribute('role', 'button');
+    thumb.setAttribute('tabindex', '0');
+    thumb.setAttribute('aria-label', 'View certificate: ' + cert.name);
+    thumb.innerHTML = placeholderSVG;
+
+    // Try loading the real image. If it exists, swap the thumbnail
+    // to show it and enable the lightbox; if not, keep the placeholder.
+    const probe = new Image();
+    probe.onload = () => {
+      thumb.style.backgroundImage = `url('${cert.img}')`;
+      thumb.innerHTML = '';
+      thumb.classList.remove('no-image');
+      thumb.addEventListener('click', () => openLightbox(cert.img, cert.name));
+      thumb.addEventListener('keypress', (e) => { if (e.key === 'Enter') openLightbox(cert.img, cert.name); });
+    };
+    probe.onerror = () => {
+      thumb.classList.add('no-image');
+    };
+    probe.src = cert.img;
+
+    const body = document.createElement('div');
+    body.className = 'cert-body';
+    body.innerHTML = `<span class="name">${cert.name}</span><span class="date mono">${cert.date}</span>`;
+
+    li.appendChild(thumb);
+    li.appendChild(body);
+    listEl.appendChild(li);
+  });
+
+  function openLightbox(src, caption){
+    lightboxImg.src = src;
+    lightboxCaption.textContent = caption;
+    lightbox.classList.add('open');
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  }
+  document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+</script>
 
 </body>
 </html>
